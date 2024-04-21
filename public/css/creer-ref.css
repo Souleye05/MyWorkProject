@@ -1,0 +1,77 @@
+
+.creer{
+    border: solid 2;
+    height: 60%;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    top: 10%;
+    display: flex;
+    border-radius: 0.5em;
+    justify-content: center;
+    align-items: center;
+    
+}
+.creer .title{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.creer .title i{
+    background-color: rgb(22, 158, 155);
+    border-radius: 50%;
+    padding: 8px 8px;
+    margin-top: 25px;
+    margin-left: 15px;
+    color: #fff;
+    font-size: 12px;
+    
+}
+
+.creer .title p{
+    background-color: rgb(22, 158, 155);
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #fff;
+}
+
+.creer .title h4{
+    margin-top: 25px;
+    margin-left: 5px;
+}
+.creer .fra{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 65px;
+}
+.creer input{
+    margin-left: 70px;
+    margin-top: 10px;
+    gap: 10px;
+}
+.creer .btn{
+    margin-top: 10px;
+    margin-left: 65px;
+    
+}
+.creer .btn1{
+    height: 30px;
+    width: 75px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: rgb(246, 244, 250);
+}
+.creer .btn2{
+    height: 30px;
+    width: 75px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(22, 158, 155);
+
+}

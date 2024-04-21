@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap");
+
+/* Définition des couleurs et de la bordure globales */
+:root {
+  --main-color: #008f89;
+  --red: #e74c3c;
+  --orange: #f39c12;
+  --light-color: #888;
+  --light-bg: #eee;
+  --black: #3a3a3a;
+  --white: #fff;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+/* Définition des styles globaux pour tous les éléments */
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* Définition de la taille de la police et de la largeur de défilement horizontal pour HTML */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* Définition de la couleur d'arrière-plan pour le corps de la page */
+body {
+  background-color: var(--light-bg);
+}
+
+/* Définition des styles pour l'en-tête */
+.header {
+  position: fixed;
+  top: 0;
+  left: 4.5%;
+  right: 0;
+  width: 79.5%;
+  background-color: var(--white);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: inherit;
+  align-content: center;
+  margin-left: 15.7%;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Définition des styles pour la partie gauche de l'en-tête */
+.header .flex-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  width: 50%;
+}
+
+/* Définition de l'opacité pour la case à cocher du menu */
+#menu_checkbox {
+  opacity: 0;
+}
+
+/* Définition des styles pour l'étiquette du menu */
+.header label {
+  position: relative;
+  top: -5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* Définition des styles pour les divisions dans l'étiquette du menu */
+.header label div {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+  border-radius: 2px;
+  font-size: 3.3rem;;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* Définition des styles pour les icônes dans la partie gauche de l'en-tête */
+.header .flex-left .icons {
+  margin-right: 20px;
+}
+
+/* Définition des styles pour la première division dans l'étiquette du menu lorsque la case à cocher est cochée */
+#menu_checkbox:checked ~ .header label div:first-child {
+  display: none;
+}
+
+/* Définition des styles pour la deuxième division dans l'étiquette du menu lorsque la case à cocher est cochée */
+#menu_checkbox:checked ~ .header label div:nth-child(2) {
+  display: block;
+}
+
+/* Définition des styles pour la première division dans l'étiquette du menu lorsque la case à cocher n'est pas cochée */
+#menu_checkbox:not(:checked) ~ .header label div:first-child {
+  display: block;
+}
+
+/* Définition des styles pour la deuxième division dans l'étiquette du menu lorsque la case à cocher n'est pas cochée */
+#menu_checkbox:not(:checked) ~ .header label div:nth-child(2) {
+  display: none;
+}
+
+/* Définition des styles pour l'en-tête lorsque la case à cocher est cochée */
+#menu_checkbox:checked ~ .header {
+    width: 98.5%;
+  left: 1%;
+  right: 1%;
+  margin-left: 0;
+}
+
+/* Définition des styles pour la section principale lorsque la case à cocher est cochée */
+#menu_checkbox:checked ~ .home-section {
+    width: 98.5%;
+    right: 1%;
+  left: 1%;
+  margin-left: 0;
+}
+
+/* Définition des styles pour le pied de page lorsque la case à cocher est cochée */
+#menu_checkbox:checked ~ .footer {
+    width: 98.5%;
+    right: 1%;
+  margin-left: 0;
+}
+
+/* Définition des styles pour la barre latérale lorsque la case à cocher est cochée */
+#menu_checkbox:checked ~ .side-bar {
+ transform: translateX(-100%);
+}
+
+/* Définition des styles pour les icônes dans la partie gauche de l'en-tête */
+.header .flex-left .icons div {
+  font-size: 1rem;
+  color: var(--black);
+  background-color: var(--light-bg);
+  border-radius: 20rem;
+  height: 4rem;
+  width: 4rem;
+  line-height: 5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Définition des styles pour les icônes dans la partie gauche de l'en-tête lorsqu'elles sont survolées */
+.header .flex-left .icons div:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* Définition des styles pour le formulaire de recherche dans la partie gauche de l'en-tête */
+.header .flex-left .search-form {
+  width: 30rem;
+  border-radius: 20rem;
+  background-color: var(--light-bg);
+  padding: 1rem 1.5rem;
+  display: flex;
+}
+
+/* Définition des styles pour l'entrée de texte dans le formulaire de recherche */
+.header .flex-left .search-form input {
+  width: 100%;
+  font-size: 1.8rem;
+  color: var(--black);
+  background: none;
+}
+
+/* Définition des styles pour le bouton de soumission dans le formulaire de recherche */
+.header .flex-left .search-form button {
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+/* Définition des styles pour le bouton de soumission dans le formulaire de recherche lorsqu'il est survolé */
+.header .flex-left .search-form button:hover {
+  color: var(--main-color);
+}
+
+/* Définition des styles pour la partie droite de l'en-tête */
+.header .flex-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+
+/* Définition des styles pour l'entrée de date */
+[type="date"] {
+  background: var(--light-bg)
+    url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)
+    5% 50% no-repeat;
+  color: var(--main-color);
+}
+
+/* Suppression des flèches de l'entrée de date */
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* Définition des styles pour l'entrée de date dans la partie droite de l'en-tête */
+.flex-right input {
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+  width: 190px;
+  height: 50px;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 5%;
+}
+
+/* Définition des styles pour le profil dans la partie droite de l'en-tête */
+.flex-right .profil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+}
+
+/* Définition des styles pour l'image du profil */
+.flex-right .profil .image {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+/* Définition des styles pour les informations du profil */
+.flex-right .profil .info {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Définition des styles pour le nom dans les informations du profil */
+.flex-right .profil p {
+  color: var(--main-color);
+}
+
+/* Définition des styles pour la barre latérale */
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 37rem;
+  background-color: var(--white);
+  height: 100vh;
+  z-index: 2;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+/* Définition des styles pour le profil dans la barre latérale */
+.side-bar .profile {
+  padding: 2rem 0 0rem 3rem;
+  text-align: left;
+}
+
+/* Définition des styles pour l'image du profil dans la barre latérale */
+.side-bar .profile .image {
+  height: 10rem;
+  width: 20rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+/* Définition des styles pour le titre du menu dans la barre latérale */
+.side-bar .profile .menu {
+  font-size: 2rem;
+  color: var(--light-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Définition des styles pour les liens dans la barre latérale */
+.side-bar .navbar a {
+  display: block;
+  padding: 1.3rem;
+  padding-left: 4rem;
+  font-size: 2rem;
+  margin: 0 2rem;
+  border-radius: 5px;
+}
+
+/* Définition des styles pour les icônes dans les liens de la barre latérale */
+.side-bar .navbar a i {
+  margin-right: 1rem;
+  color: var(--light-color);
+  transition: 0.2s linear;
+}
+
+/* Définition des styles pour le texte dans les liens de la barre latérale */
+.side-bar .navbar a span {
+  color: var(--black);
+}
+
+/* Définition des styles pour les liens dans la barre latérale lorsqu'ils sont survolés */
+.side-bar .navbar a:hover {
+  background-color: var(--main-color);
+}
+
+/* Définition des styles pour les icônes dans les liens de la barre latérale lorsqu'ils sont survolés */
+.side-bar .navbar a:hover i {
+  margin-right: 2.5rem;
+  color: var(--light-bg);
+}
+
+/* Définition des styles pour le texte dans les liens de la barre latérale lorsqu'ils sont survolés */
+.side-bar .navbar a:hover span {
+  margin-right: 2.5rem;
+  color: var(--light-bg);
+  font-weight: bold;
+}
+
+/* Définition des styles pour la barre latérale active */
+.side-bar.active {
+  left: -30rem;
+}
+
+/* Définition des styles pour la section principale */
+.home-section {
+    position: relative;
+    margin: 5px .7rem 2px 40rem;
+    padding: 0;
+    top: 80px;
+    right: 10px;
+    z-index: 1;
+  
+  }
+
+
+/* Définition des styles pour le titre dans la section principale */
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light-bg);
+    padding: 2rem 0rem;
+    color: var(--black);
+    font-size: 2rem;
+}
+
+ /* Définition des styles pour la partie gauche du titre dans la section principale */
+ .title .left {
+    font-weight: bold;
+    color: black;
+}
+
+/* Définition des styles pour la partie droite du titre dans la section principale */
+.title .right {
+    font-size: 1.5rem;
+    text-align: end;
+    }
+
+
+/* Définition des styles pour l'icône fixe */
+.fixed-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  background-color: darkcyan;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+/* ----------------------------------------------FOOTER-CSS-----------------------------------------------------------*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 80.7%;
+  background-color: var(--white);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2.5rem 2rem;
+  color: var(--black);
+  margin-left: 38.8rem;
+  border-radius: 5px;
+}
+
+/* Définition des styles pour les éléments span dans le pied de page */
+.footer span {
+  color: var(--main-color);
+}
+
+/* ----------------------------------------------RESPONSIVE-CSS-----------------------------------------------------------*/
+ 
+
+
+
+/* Définition des styles pour les écrans de taille maximale 1200px */
+@media (max-width: 1200px) {
+    body {
+    padding-left: 0;
+    }
+  
+    .header {
+      width: 98.5%;
+    left: 1%;
+    right: 1%;
+    margin-left: 0;
+  }
+   .home-section {
+      width: 98.5%;
+      right: 1%;
+    left: 1%;
+    margin-left: 0;
+  }
+   .footer {
+      width: 98.5%;
+      right: 1%;
+    margin-left: 0;
+  }
+   .side-bar {
+   transform: translateX(-100%);
+  }
+  
+    }
+  
+    /* Définition des styles pour les écrans de taille maximale 991px */
+    @media (max-width: 991px) {
+    html {
+    font-size: 55%;
+    }
+    }
+  
+    /* Définition des styles pour les écrans de taille maximale 768px */
+    @media (max-width: 768px) {
+    #search-btn {
+    display: inline-block;
+    }
+  
+   .header {
+      width: 98.5%;
+    left: 1%;
+    right: 1%;
+    margin-left: 0;
+  }
+  .home-section {
+      width: 98.5%;
+      right: 1%;
+    left: 1%;
+    margin-left: 0;
+  }
+   .footer {
+      width: 98.5%;
+      right: 1%;
+    margin-left: 0;
+  }
+  .side-bar {
+   transform: translateX(-100%);
+  }
+  
+    }
+  
+    /* Définition des styles pour les écrans de taille maximale 480px */
+    @media (max-width: 480px) {
+    .header .flex-right input {
+    font-size: 1.2rem;
+    padding-left: 2%;
+    }
+  
+    .header .flex-right .profil .info small {
+    font-size: 1rem;
+    }
+  
+    .side-bar .navbar a span {
+    font-size: 1.2rem;
+    }
+  
+    .home-section .title .left {
+    font-size: 1.8rem;
+    }
+  
+    .home-section .title .right {
+    font-size: 1.2rem;
+    }
+    }
+  
+    /* Définition des styles pour les écrans de taille maximale 360px */
+    @media (max-width: 360px) {
+    .header .flex-right input {
+    font-size: 1rem;
+    padding-left: 2%;
+    }
+  
+    .header .flex-right .profil .info small {
+    font-size: 0.8rem;
+    }
+  
+    .side-bar .navbar a span {
+    font-size: 1rem;
+    }
+  
+    .home-section .title .left {
+    font-size: 1.5rem;
+    }
+  
+    .home-section .title .right {
+    font-size: 1rem;
+    }
+    }
+  

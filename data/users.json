@@ -1,0 +1,30 @@
+[
+    {
+        "Nom": "Dia",
+        "Prenom": "Idy",
+        "Email": "mbowbayesaer4@gmail.com",
+        "Genre": "M",
+        "Telephone": "762895563",
+        "promo_id": "1",
+        "MotDePasse": "motdepasse1"
+    },
+    {
+        "Nom": "Dupont",
+        "Prenom": "Jean",
+        "Email": "jean.dupont@example.com",
+        "Genre": "M",
+        "Telephone": "0123456789",
+        "promo_id": "1",
+        "MotDePasse": "motdepasse2"
+    },
+    {
+        "Nom": "Durand",
+        "Prenom": "Marie",
+        "Email": "marie.durand@example.com",
+        "Genre": "F",
+        "Telephone": "0987654321",
+        "promo_id": "1",
+        "MotDePasse": "motdepasse3"
+    }
+    
+]

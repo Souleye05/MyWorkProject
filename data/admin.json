@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "nom": "Admin1",
+        "email": "admin1@example.com",
+        "role": "Admin"
+    },
+    {
+        "id": "2",
+        "nom": "Admin2",
+        "email": "admin2@example.com",
+        "role": "Admin"
+    },
+    {
+        "id": "3",
+        "nom": "Admin3",
+        "email": "admin3@example.com",
+        "role": "Admin"
+    },
+    {
+        "id": "4",
+        "nom": "Admin4",
+        "email": "admin4@example.com",
+        "role": "Admin"
+    },
+    {
+        "id": "5",
+        "nom": "Admin5",
+        "email": "admin5@example.com",
+        "role": "Admin"
+    }
+]

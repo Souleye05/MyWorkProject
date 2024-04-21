@@ -1,0 +1,30 @@
+promo_id,referentiel,status,id_Referentiel
+1,Dev Web/Mobile,Active,1
+1,Réferent Digital,Active,2
+1,AWS,Active,3
+1,Hackeuse,Active,4
+1,Developpement Data,Active,5
+2,Dev Web/Mobile,Active,1
+2,Réferent Digital,Active,2
+2,AWS,Active,3
+2,Hackeuse,Active,4
+2,Developpement Data,Active,5
+3,Dev Web/Mobile,Active,1
+3,Réferent Digital,Active,2
+3,AWS,Active,3
+3,Hackeuse,Active,4
+3,Developpement Data,Active,5
+4,Dev Web/Mobile,Active,1
+4,Réferent Digital,Active,2
+4,AWS,Active,3
+4,Hackeuse,Active,4
+4,Developpement Data,Active,5
+5,Dev Web/Mobile,Active,1
+5,Réferent Digital,Active,2
+5,Hackeuse,Active,4
+5,Developpement Data,Active,5
+6,Dev Web/Mobile,Active,1
+6,Réferent Digital,Active,2
+6,AWS,Active,3
+6,Hackeuse,Active,4
+6,Developpement Data,Active,5

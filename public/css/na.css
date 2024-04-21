@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    height: 475px;
+    border-radius: 5px;
+}
+.container .title{
+    max-width: 700px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    padding: 15px;
+    background: rgb(247, 248, 249);
+}
+.NUM{
+    display: flex;
+    justify-content: space-between;
+}
+.num1{
+    display: flex;
+}
+.num1 h4::before{
+    content: '';
+    position: absolute;
+    left: 125px;
+    bottom: 15px;
+    height: 1px;
+    width: 305px;
+    background: rgba(88, 88, 88, 0.059);
+}
+.num1 p{
+    background-color: rgb(22, 158, 155);
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+.num2{
+    display: flex;
+    gap: 5px;
+}
+.num2 p{
+    background-color: rgb(233, 241, 241);
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: rgb(22, 158, 155);;
+}
+.num1 h4{
+    margin-top: 22px;
+    margin-left: 5px;
+    font-size: 12px;
+    position: relative;
+}
+.num2 h4{
+    margin-right: 15px;
+    margin-top: 22px;
+    font-size: 12px;
+}
+.container .chi{
+    background: rgb(216, 222, 216);
+    border-radius: 50%;
+    padding: 25px 25px;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 5px;
+}
+ .box1,.box2,.box3,.box4{
+    display: flex;
+    gap: 10px;
+    margin: 15px;
+    
+ }
+ .inpput-box input{
+    height: 30px;
+    width: 330px;
+    font-size: 12px;
+    padding: 10px;
+ }
+ h5{
+    font-size: 12px;
+ }
+ .inpput-box select{
+    height: 30px;
+    width: 330px;
+    font-size: 12px;
+    padding: 10px;
+ }
+ .inpput-box .Date{
+    position: relative;
+ }
+ .inpput-box i{
+    position: absolute;
+    bottom: 32%;
+    right: 23%;
+    background-color: rgb(22, 158, 155);
+    padding: 5px;
+    color: #fff;
+    border-radius: 2px;
+ }
+.button{
+    height: 30px;
+    margin: 15px;
+    
+}
+.button input{
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(22, 158, 155);
+    color: #fff;
+    
+    
+}
+
+ 
